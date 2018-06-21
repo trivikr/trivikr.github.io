@@ -1,10 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-class HomeIndex extends React.Component {
-    render() {
-        const siteTitle = this.props.data.site.siteMetadata.title
-        const siteDescription = this.props.data.site.siteMetadata.description
+export default function HomeIndex(props) {
+        const siteTitle = props.data.site.siteMetadata.title
+        const siteDescription = props.data.site.siteMetadata.description
 
         return (
             <div>
@@ -27,10 +26,7 @@ class HomeIndex extends React.Component {
                 </div>
             </div>
         )
-    }
 }
-
-export default HomeIndex
 
 export const pageQuery = graphql`
     query PageQuery {
